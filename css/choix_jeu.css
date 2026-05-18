@@ -60,24 +60,35 @@ body::after {
   pointer-events: none;
 }
 
-    h1 {
-      font-weight: 900;
-      font-size: 4rem;
-      letter-spacing: 0.15em;
-      color: #00f0ff;
-      text-transform: uppercase;
-      text-shadow:
-        0 0 5px #00f0ff,
-        0 0 10px #00f0ff,
-        0 0 20px #00e0ff,
-        0 0 30px #00d0ff,
-        0 0 40px #00c0ff;
-      margin-bottom: 60px;
-    }
+/* ===== Titre ===== */
+h1 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 60px;
 
-    .menu {
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-      width: 300px;
-    }
+  background: linear-gradient(90deg, #00e5ff, #9d4dff, #00e5ff);
+  background-size: 300%;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: glowText 5s linear infinite;
+
+  text-shadow:
+    0 0 10px rgba(0,255,255,0.5),
+    0 0 20px rgba(157,77,255,0.5);
+}
+
+@keyframes glowText {
+  0% { background-position: 0%; }
+  100% { background-position: 300%; }
+}
+
+/* ===== Menu ===== */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 320px;
+}
