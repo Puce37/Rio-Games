@@ -1,27 +1,42 @@
-/* ===== Base ===== */
+/* =======================================================
+   BASE
+======================================================= */
+
 body {
   font-family: 'Orbitron', sans-serif;
+
   margin: 0;
   min-height: 100vh;
-  overflow: hidden;
+
+  overflow-x: hidden;
+  overflow-y: auto;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
+  padding: 40px 20px;
+
   background:
     radial-gradient(circle at top, rgba(140, 0, 255, 0.15), transparent 40%),
     radial-gradient(circle at bottom, rgba(0, 200, 255, 0.12), transparent 40%),
-    linear-gradient(135deg, #050510, #090916 40%, #020205);
+    linear-gradient(135deg, #050510, #090916 45%, #020205);
 
   color: #d8f6ff;
+
   position: relative;
+
+  text-align: center;
 }
 
-/* ===== Grille futuriste ===== */
+/* =======================================================
+   CYBER GRID
+======================================================= */
+
 body::before {
   content: "";
+
   position: fixed;
   inset: 0;
 
@@ -32,6 +47,7 @@ body::before {
   background-size: 40px 40px;
 
   mask-image: radial-gradient(circle at center, black 30%, transparent 90%);
+
   pointer-events: none;
 
   animation: gridMove 12s linear infinite;
@@ -41,23 +57,10 @@ body::before {
   from {
     transform: translateY(0px);
   }
+
   to {
     transform: translateY(40px);
   }
-}
-
-/* ===== Glow ambiance ===== */
-body::after {
-  content: "";
-  position: fixed;
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(0,255,255,0.08), transparent 70%);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  filter: blur(50px);
-  pointer-events: none;
 }
 
 /* ===== Titre ===== */
