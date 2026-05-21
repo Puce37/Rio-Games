@@ -1,3 +1,3 @@
 function goToMenu() {
-  window.location.href = "../index.html";
+  window.location.href = "./magasin.html";
 }
