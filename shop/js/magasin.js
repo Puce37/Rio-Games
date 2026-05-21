@@ -43,7 +43,7 @@ window.addEventListener("load", () => {
   updateStore();
 });
 
-function goBack() {
+function goToMenu() {
   window.location.href = "../index.html";
 }
 
