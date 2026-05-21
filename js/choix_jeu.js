@@ -3,17 +3,17 @@ function goToMenu() {
 }
 
 function memo() {
-  window.location.href = "../jeu/memory/choix_version.html";
+  window.location.href = "./memory/choix_version.html";
 }
 
 function puzzle() {
-  window.location.href = "../jeu/puzzle/pièces.html";
+  window.location.href = "./puzzle/pièces.html";
 }
 
 function labi() {
-  window.location.href = "..jeu/maze/maze.html";
+  window.location.href = "./maze/maze.html";
 }
 
 function clic() {
-  window.location.href = "../jeu/clicker/clicker.html";
+  window.location.href = "./clicker/clicker.html";
 }
