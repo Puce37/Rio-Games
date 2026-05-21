@@ -173,7 +173,7 @@ h1 {
 }
 
 /* =======================================================
-   Bouton Retour
+   Bouton
 ======================================================= */
 
 button {
@@ -386,3 +386,9 @@ button:active {
       user-select: none;
     }
 	
+.peucommun {
+  color: #00ff99;
+  text-shadow:
+    0 0 10px #00ff99,
+    0 0 25px #00ff99;
+}

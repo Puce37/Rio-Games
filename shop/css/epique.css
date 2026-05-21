@@ -172,30 +172,90 @@ h1 {
     );
 }
 
-    button {
-      padding: 15px 30px;
-      font-size: 18px;
-      font-weight: bold;
-      color: #a85fff;
-      background: linear-gradient(145deg, #25053a, #501c7b);
-      border: 2px solid #a85fff;
-      border-radius: 12px;
-      cursor: pointer;
-      box-shadow: 0 0 6px #a85fff, inset 0 0 8px #a85fff;
-      margin: 10px;
-      transition: all 0.2s ease-in-out;
-    }
+       /* =======================================================
+   Bouton
+======================================================= */
 
-    button:hover {
-      background: linear-gradient(145deg, #a85fff, #cc80ff);
-      transform: scale(1.05);
-	  box-shadow:
-        0 0 5px #a85fff,
-        0 0 10px #a85fff,
-        0 0 20px #a85fff,
-        0 0 30px #a85fff,
-        0 0 40px #a85fff;
-    }
+button {
+  position: relative;
+  z-index: 1;
+
+  overflow: hidden;
+
+  margin: 14px auto;
+
+  min-width: 240px;
+
+  padding: 16px 40px;
+
+  border-radius: 18px;
+
+  border: 1px solid #b07dee;
+
+  background: rgba(255,255,255,0.05);
+
+  backdrop-filter: blur(12px);
+
+  color: #dffcff;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+
+  cursor: pointer;
+
+  transition: 0.35s ease;
+
+  box-shadow:
+    0 0 18px rgba(0,255,255,0.08),
+    inset 0 0 12px rgba(255,255,255,0.03);
+}
+
+/* Shine effect */
+
+button::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: -130%;
+
+  width: 80%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.18),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  transition: 0.8s;
+}
+
+button:hover::before {
+  left: 150%;
+}
+
+button:hover {
+  transform: translateY(-4px);
+
+  background: rgba(0,255,255,0.08);
+
+  border-color: #a85fff;
+
+  box-shadow:
+    0 0 20px #a85fff,
+    0 0 60px rgba(157,77,255,0.15);
+}
+
+button:active {
+  transform: scale(0.97);
+}
 	
     #packContainer {
       position: relative;
@@ -326,3 +386,9 @@ h1 {
       user-select: none;
     }
 	
+.epique {
+  color: #b16cff;
+  text-shadow:
+    0 0 10px #b16cff,
+    0 0 25px #b16cff;
+}

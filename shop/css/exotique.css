@@ -172,32 +172,91 @@ h1 {
     );
 }
 
-    button {
-      padding: 15px 30px;
-      font-size: 18px;
-      font-weight: bold;
-      color: #ff007a;
-      background: linear-gradient(145deg, #3a0520, #8e004f);
-      border: 2px solid #ff007a;
-      border-radius: 12px;
-      cursor: pointer;
-      box-shadow: 0 0 6px #ff007a, inset 0 0 8px #ff007a;
-      margin: 10px;
-      transition: all 0.2s ease-in-out;
-    }
+   /* =======================================================
+   Bouton
+======================================================= */
 
-    button:hover {
-      background: linear-gradient(145deg, #ff007a, #ff71a6);
-      transform: scale(1.05);
-	  color: white;
-	  box-shadow:
-        0 0 5px #ff007a,
-        0 0 10px #ff007a,
-        0 0 20px #ff007a,
-        0 0 30px #ff007a,
-        0 0 40px #ff007a;
-    }
-	
+button {
+  position: relative;
+  z-index: 1;
+
+  overflow: hidden;
+
+  margin: 14px auto;
+
+  min-width: 240px;
+
+  padding: 16px 40px;
+
+  border-radius: 18px;
+
+  border: 1px solid #ec67a7;
+
+  background: rgba(255,255,255,0.05);
+
+  backdrop-filter: blur(12px);
+
+  color: #dffcff;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+
+  cursor: pointer;
+
+  transition: 0.35s ease;
+
+  box-shadow:
+    0 0 18px rgba(0,255,255,0.08),
+    inset 0 0 12px rgba(255,255,255,0.03);
+}
+
+/* Shine effect */
+
+button::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: -130%;
+
+  width: 80%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.18),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  transition: 0.8s;
+}
+
+button:hover::before {
+  left: 150%;
+}
+
+button:hover {
+  transform: translateY(-4px);
+
+  background: rgba(0,255,255,0.08);
+
+  border-color: #ff007a;
+
+  box-shadow:
+    0 0 20px #ff007a,
+    0 0 60px rgba(157,77,255,0.15);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
     #packContainer {
       position: relative;
       width: 160px;
@@ -327,3 +386,9 @@ h1 {
       user-select: none;
     }
 	
+.exotique {
+  color: #ff007a;
+  text-shadow:
+    0 0 10px #ff007a,
+    0 0 25px #ff007a;
+}
