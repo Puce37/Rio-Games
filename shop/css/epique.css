@@ -1,28 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
-/* ===== Base ===== */
+/* =======================================================
+   BASE
+======================================================= */
+
 body {
   font-family: 'Orbitron', sans-serif;
+
   margin: 0;
   min-height: 100vh;
-  overflow: hidden;
+
+  overflow-x: hidden;
+  overflow-y: auto;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
+  padding: 40px 20px;
+
   background:
     radial-gradient(circle at top, rgba(140, 0, 255, 0.15), transparent 40%),
     radial-gradient(circle at bottom, rgba(0, 200, 255, 0.12), transparent 40%),
-    linear-gradient(135deg, #050510, #090916 40%, #020205);
+    linear-gradient(135deg, #050510, #090916 45%, #020205);
 
   color: #d8f6ff;
+
   position: relative;
+
+  text-align: center;
 }
 
-/* ===== Grille futuriste ===== */
+/* =======================================================
+   CYBER GRID
+======================================================= */
+
 body::before {
   content: "";
+
   position: fixed;
   inset: 0;
 
@@ -33,6 +47,7 @@ body::before {
   background-size: 40px 40px;
 
   mask-image: radial-gradient(circle at center, black 30%, transparent 90%);
+
   pointer-events: none;
 
   animation: gridMove 12s linear infinite;
@@ -42,48 +57,120 @@ body::before {
   from {
     transform: translateY(0px);
   }
+
   to {
     transform: translateY(40px);
   }
 }
 
-/* ===== Glow ambiance ===== */
+/* =======================================================
+   AMBIENT GLOW
+======================================================= */
+
 body::after {
   content: "";
+
   position: fixed;
+
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(0,255,255,0.08), transparent 70%);
+
   top: 50%;
   left: 50%;
+
   transform: translate(-50%, -50%);
-  filter: blur(50px);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0,255,255,0.08),
+      rgba(157,77,255,0.06),
+      transparent 70%
+    );
+
+  filter: blur(60px);
+
   pointer-events: none;
 }
 
-    h1 {
-      font-weight: 900;
-      font-size: 3rem;
-	  text-shadow:
-        0 0 5px #a85fff,
-        0 0 10px #a85fff,
-        0 0 20px #a85fff,
-        0 0 30px #a85fff,
-        0 0 40px #a85fff;
-      margin-bottom: 30px;
-    }
+/* =======================================================
+   TITLE
+======================================================= */
 
-    #pointsDisplay {
-      font-size: 1.5em;
-      margin-bottom: 30px;
-      color: #a85fff;
-      text-shadow:
-        0 0 5px #a85fff,
-        0 0 10px #a85fff,
-        0 0 20px #a85fff,
-        0 0 30px #a85fff,
-        0 0 40px #a85fff;
-    }
+h1 {
+  position: relative;
+  z-index: 1;
+
+  font-size: 2.5rem;
+
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  margin-bottom: 50px;
+
+  background: linear-gradient(
+    90deg,
+    #a85fff,
+    #501c7b,
+    #a85fff
+  );
+
+  background-size: 300%;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: glowText 6s linear infinite;
+
+  text-shadow:
+    0 0 12px #b07dee,
+    0 0 25px #cdb2ee;
+}
+
+@keyframes glowText {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 300%;
+  }
+}
+
+/* =======================================================
+   SCROLLBAR
+======================================================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(0, 5, 20);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #a85fff,
+      #501c7b
+    );
+
+  box-shadow:
+    0 0 10px #b07dee;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:
+    linear-gradient(
+      180deg,
+      #a85fff,
+      #501c7b
+    );
+}
 
     button {
       padding: 15px 30px;
