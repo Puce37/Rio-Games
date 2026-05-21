@@ -208,36 +208,7 @@ body::after {
       perspective: 1000px;
       color: inherit;
     }
-    .rarity-commun {
-      border-color: gray;
-      box-shadow: 0 0 12px gray;
-      color: gray;
-      text-shadow: 0 0 8px gray;
-    }
-    .rarity-peucommun {
-      border-color: #33ffaa;
-      box-shadow: 0 0 14px #33ffaa;
-      color: #33ffaa;
-      text-shadow: 0 0 10px #33ffaa;
-    }
-    .rarity-rare {
-      border-color: #3399ff;
-      box-shadow: 0 0 18px #3399ff;
-      color: #3399ff;
-      text-shadow: 0 0 12px #3399ff;
-    }
-    .rarity-epique {
-      border-color: #cc33ff;
-      box-shadow: 0 0 20px #cc33ff;
-      color: #cc33ff;
-      text-shadow: 0 0 14px #cc33ff;
-    }
-    .rarity-legendary {
-      border-color: #ffcc33;
-      box-shadow: 0 0 25px #ffcc33;
-      color: #ffcc33;
-      text-shadow: 0 0 16px #ffcc33;
-    }
+
     .card img {
       width: 100%;
       height: 100%;
