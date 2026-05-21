@@ -1,28 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
-/* ===== Base ===== */
+/* =======================================================
+   BASE
+======================================================= */
+
 body {
   font-family: 'Orbitron', sans-serif;
+
   margin: 0;
   min-height: 100vh;
-  overflow: hidden;
+
+  overflow-x: hidden;
+  overflow-y: auto;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
+  padding: 40px 20px;
+
   background:
     radial-gradient(circle at top, rgba(140, 0, 255, 0.15), transparent 40%),
     radial-gradient(circle at bottom, rgba(0, 200, 255, 0.12), transparent 40%),
-    linear-gradient(135deg, #050510, #090916 40%, #020205);
+    linear-gradient(135deg, #050510, #090916 45%, #020205);
 
   color: #d8f6ff;
+
   position: relative;
+
+  text-align: center;
 }
 
-/* ===== Grille futuriste ===== */
+/* =======================================================
+   CYBER GRID
+======================================================= */
+
 body::before {
   content: "";
+
   position: fixed;
   inset: 0;
 
@@ -33,6 +47,7 @@ body::before {
   background-size: 40px 40px;
 
   mask-image: radial-gradient(circle at center, black 30%, transparent 90%);
+
   pointer-events: none;
 
   animation: gridMove 12s linear infinite;
@@ -42,36 +57,85 @@ body::before {
   from {
     transform: translateY(0px);
   }
+
   to {
     transform: translateY(40px);
   }
 }
 
-/* ===== Glow ambiance ===== */
+/* =======================================================
+   AMBIENT GLOW
+======================================================= */
+
 body::after {
   content: "";
+
   position: fixed;
+
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(0,255,255,0.08), transparent 70%);
+
   top: 50%;
   left: 50%;
+
   transform: translate(-50%, -50%);
-  filter: blur(50px);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0,255,255,0.08),
+      rgba(157,77,255,0.06),
+      transparent 70%
+    );
+
+  filter: blur(60px);
+
   pointer-events: none;
 }
 
-    h1 {
-      font-weight: 900;
-      font-size: 3rem;
-	  text-shadow:
-        0 0 5px #00ff88,
-        0 0 10px #00ff88,
-        0 0 20px #00ff88,
-        0 0 30px #00ff88,
-        0 0 40px #00ff88;
-      margin-bottom: 30px;
-    }
+/* =======================================================
+   TITLE
+======================================================= */
+
+h1 {
+  position: relative;
+  z-index: 1;
+
+  font-size: 4.5rem;
+
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  margin-bottom: 50px;
+
+  background: linear-gradient(
+    90deg,
+    #00ff88,
+    #007f55,
+    #00ff88
+  );
+
+  background-size: 300%;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: glowText 6s linear infinite;
+
+  text-shadow:
+    0 0 12px #06e79c,
+    0 0 25px #8debbf;
+}
+
+@keyframes glowText {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 300%;
+  }
+}
 	
     #pointsDisplay {
       font-size: 1.5em;
