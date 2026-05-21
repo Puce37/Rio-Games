@@ -31,41 +31,6 @@ body {
 }
 
 /* =======================================================
-   SCROLLBAR
-======================================================= */
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgb(0, 5, 20);
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 20px;
-
-  background:
-    linear-gradient(
-      180deg,
-      #00ff88,
-      #007f55
-    );
-
-  box-shadow:
-    0 0 10px #06e79c;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background:
-    linear-gradient(
-      180deg,
-      #00ff88,
-      #007f55
-    );
-}
-
-/* =======================================================
    CYBER GRID
 ======================================================= */
 
@@ -171,7 +136,42 @@ h1 {
     background-position: 300%;
   }
 }
-	
+
+/* =======================================================
+   SCROLLBAR
+======================================================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(0, 5, 20);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #00ff88,
+      #007f55
+    );
+
+  box-shadow:
+    0 0 10px #06e79c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:
+    linear-gradient(
+      180deg,
+      #00ff88,
+      #007f55
+    );
+}
+
     #pointsDisplay {
       font-size: 1.5em;
       margin-bottom: 30px;
