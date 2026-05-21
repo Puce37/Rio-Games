@@ -5,17 +5,19 @@
     <link rel="shortcut icon" type="image/png" href="../../Logo/logo.png" />
     <title>Rio Memory Games</title>
     
-    <link rel="stylesheet" href="../../css/choix_version.css" />
+    <link rel="stylesheet" href="../../css/choix.css" />
+    <link rel="stylesheet" href="../../css/button.css" />
+    <link rel="stylesheet" href="../../css/scrollbar.css" />
   </head>
   <body>
-    <h2>Choisis une difficulté</h2>
+    <h1>Choisis une difficulté</h1>
     <div class="menu">
-      <a href="memory16.html">🟢 Facile</a>
-      <a href="memory32.html">🟡 Moyen</a>
-      <a href="memory64.html">🔴 Difficile</a>
+      <button onclick="M16()" class="button">🟢 Facile</button>
+      <button onclick="M32()" class="button">🟡 Moyen</button>
+      <button onclick="M64()" class="button">🔴 Difficile</button>
     </div>
-    <div class="back" onclick="menu()">⬅ Retour</div>
+    <div class="return" onclick="menu()">⬅ Retour</div>
 
-    <script src="../../js/choix_version.js"></script>
+    <script src="../js/choix_version.js"></script>
   </body>
 </html>
